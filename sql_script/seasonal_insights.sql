@@ -92,8 +92,8 @@ CASE
     WHEN a.holiday = 0 THEN 'Not_holiday'
     WHEN a.holiday = 1 THEN 'Holiday'
 END AS 'day_type',
-SUM(CASE WHEN a.holiday = 0 THEN b.casual_cnt / 355 ELSE b.casual_cnt / 10 END) AS casual_rentals,
-SUM(CASE WHEN a.holiday = 0 THEN b.registered_cnt / 355 ELSE b.registered_cnt / 10 END) AS registered_rentals
+SUM(CASE WHEN a.holiday = 0 THEN b.casual_cnt / 711 ELSE b.casual_cnt / 20 END) AS casual_rentals,
+SUM(CASE WHEN a.holiday = 0 THEN b.registered_cnt / 711 ELSE b.registered_cnt / 20 END) AS registered_rentals
 FROM bike_rental.date_info AS a
 JOIN bike_rental.rental_info AS b
 ON a.record_id = b.record_id

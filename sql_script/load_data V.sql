@@ -4,6 +4,7 @@ FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 IGNORE 1 LINES
 (record_id, date, season, yr, mnth, hr, holiday, weekday, workingday);
+-- SET date = STR_TO_DATE(@date, '%Y-%m-%d');
 
 SELECT * FROM date_info;
 
@@ -27,5 +28,5 @@ IGNORE 1 LINES
 
 SELECT * FROM rental_info;
 
-
+SHOW VARIABLES LIKE 'secure_file_priv';
 
